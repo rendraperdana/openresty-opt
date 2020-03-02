@@ -5,6 +5,7 @@ yum install lua-devel readline-devel pcre-devel gcc perl-Digest-* zlib-devel -y
 SECONDS=0
 
 gmake install
+cp ./openresty /usr/local/openresty -Rv
 rm -f /usr/lib/systemd/system/openresty.service
 cp ./util/openresty.service /usr/lib/systemd/system/ -v
 rm -f /usr/local/bin/openresty
