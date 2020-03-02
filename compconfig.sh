@@ -22,7 +22,7 @@ make -j$(nproc)
 cd ../
 
 ./configure \
---with-cc-opt='-O3 -Ofast -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=native -DTCP_FASTOPEN=23 CC=ccache gcc' \
+--with-cc-opt='-O3 -Ofast -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=native -DTCP_FASTOPEN=23' \
 --with-pcre-jit \
 --with-stream \
 --with-stream_ssl_module \
