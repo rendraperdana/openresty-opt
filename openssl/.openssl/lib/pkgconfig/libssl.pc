@@ -1,4 +1,4 @@
-prefix=/opt/compiled/openresty/openresty-opt/openssl/.openssl
+prefix=/opt/temp/openresty-opt/openssl/.openssl
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
