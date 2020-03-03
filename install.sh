@@ -16,7 +16,10 @@ systemctl daemon-reload
 systemctl enable openresty
 
 mkdir -p /var/log/nginx
-chown nobody:nobody /var/log/nginx
+touch /var/log/nginx/access.log
+touch /var/log/nginx/error.log
+chown nobody:nobody -Rv /var/log/nginx
+chmod 666 /var/log/nginx/*
 
 if (( $SECONDS > 3600 )) ; then
     let "hours=SECONDS/3600"

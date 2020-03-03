@@ -46,18 +46,6 @@ cd ../
 -j$(nproc)
 
 gmake j$(nproc)
-gmake install
-rm -f /usr/lib/systemd/system/openresty.service
-cp ./util/openresty.service /usr/lib/systemd/system/ -v
-rm -f /usr/local/bin/openresty
-ln -s /usr/local/openresty/bin/openresty /usr/local/bin/openresty
-rm -rf /usr/local/openresty/conf/nginx.conf
-cp ./util/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
-systemctl daemon-reload
-systemctl enable openresty
-
-mkdir -p /var/log/nginx
-chown nobody:nobody /var/log/nginx
 
 if (( $SECONDS > 3600 )) ; then
     let "hours=SECONDS/3600"
